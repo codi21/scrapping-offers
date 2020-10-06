@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap');
+* {
+    margin : 0;
+    padding : 0 ;
+    font-family: 'Teko', sans-serif;
+    letter-spacing : 2px;
+}
+body {
+    background : black; 
+    color : white;
+}
+.container-content{
+    display : flex ;
+    justify-content : space-around;
+    align-items : center;
+    width : auto;
+    height :100vh;
+}
+.changomas img{
+    border-radius : 50%;
+    width : 200px;
+    height : 200px;
+    object-fit : fill;
+}
+.tadicor img {
+    border-radius: 50%;
+}
+.logo:hover{
+    transform : scale(1.1);
+    cursor : pointer;
+}
+
