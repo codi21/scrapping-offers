@@ -2,16 +2,20 @@ button = document.getElementById("logovea");
 tadicor = document.getElementById("tadicor");
 changomas = document.getElementById('changomas');
 
-button.addEventListener("click",async (event)=>{
-    link = await axios.get("codi-x555LAB:3000/link").then(function(data){
-        console.log(data);
-       window.location.href = data.data.link;
-    });
-});
 
+async function getData(){
+    link =await axios.get('/link').then(function(data){
+        return data.data.link;
+    });
+    return link;
+}
+
+button.addEventListener('click' , async function(){
+    window.location.href = await getData();
+});
 tadicor.addEventListener("click" , function(){
-    window.location.href = "http://localhost:3000/tadicor-folleto.html"
+    window.location.href = "/tadicor-folleto.html"
 });
 changomas.addEventListener("click",function(){
-    window.location.href ="http://localhost:3000/changomas.html";
+    window.location.href ="/changomas.html";
 });
